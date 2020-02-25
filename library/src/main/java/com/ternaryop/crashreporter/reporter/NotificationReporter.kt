@@ -1,11 +1,12 @@
 package com.ternaryop.crashreporter.reporter
 
-import android.content.Context
 import com.ternaryop.crashreporter.Reporter
-import com.ternaryop.photoshelf.util.notification.notify
 
-class NotificationReporter(protected val context: Context) : Reporter {
+/**
+ * Show a notification passing the exception to the [notifier]
+ */
+class NotificationReporter(private val notifier : (t: Throwable) -> Unit) : Reporter {
     override fun report(t: Throwable) {
-        t.notify(context, "Application died")
+        notifier(t)
     }
 }
