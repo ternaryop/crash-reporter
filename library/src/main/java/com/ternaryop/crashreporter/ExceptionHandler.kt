@@ -4,7 +4,8 @@ import kotlin.system.exitProcess
 
 private const val LOG_TAG = "CrashReport"
 
-class ExceptionHandler(private val originalHandler: Thread.UncaughtExceptionHandler?) : Thread.UncaughtExceptionHandler {
+class ExceptionHandler(private val originalHandler: Thread.UncaughtExceptionHandler?
+) : Thread.UncaughtExceptionHandler {
     private val list: MutableList<Reporter> = mutableListOf()
 
     fun add(reporter: Reporter) {
