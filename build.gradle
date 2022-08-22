@@ -13,7 +13,7 @@ buildscript {
         androidXAppCompatLibVersion = '1.6.0-beta01'
         androidXCoreKtx = '1.9.0-beta01'
 
-        ternaryOpUtilLibVersion = '1.4.11'
+        ternaryOpUtilLibVersion = '1.4.12'
 
         junitLibVersion = '4.13.2'
 
